@@ -24,6 +24,8 @@ scaler = MinMaxScaler(feature_range=(0,1))
 dataset_train = scaler.fit_transform(dataset_train)
 dataset_test = scaler.transform(dataset_test)
 
+
+
 def create_dataset(df):
     x = []
     y = []
