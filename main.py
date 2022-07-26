@@ -8,9 +8,9 @@ from keras.layers import LSTM, Dense, Dropout
 from google.colab import files
 dataset = files.upload()
 
-df = pd.read_csv('TSLA.csv')
+df = pd.read_csv('data.csv')
 
-pd.read_csv('TSLA.csv')
+pd.read_csv('data.csv')
 
 df.shape
 
