@@ -6,6 +6,7 @@ from keras.models import Sequential, load_model
 from keras.layers import LSTM, Dense, Dropout
 from google.colab import files
 
+
 dataset = files.upload()
 
 df = pd.read_csv('data.csv')
