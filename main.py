@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential, load_model
 from keras.layers import LSTM, Dense, Dropout
-
 from google.colab import files
+
+
 dataset = files.upload()
 
 df = pd.read_csv('data.csv')
@@ -62,6 +63,7 @@ model.fit(x_train, y_train, epochs=50, batch_size=32)
 model.save('stock_prediction.h5')
 
 model = load_model('stock_prediction.h5')
+
 
 predictions = model.predict(x_test)
 predictions = scaler.inverse_transform(predictions)
